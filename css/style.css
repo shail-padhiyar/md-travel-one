@@ -1,0 +1,459 @@
+/********* General Section **********/
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --theme-blue-light: #85D5F8;
+    --theme-blue-semi-light: #00BBF2;
+    --theme-blue-semi-dark: #0184BA;
+    --theme-blue-dark: #261655;
+    --theme-gray: #71787B;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--theme-gray);
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.bg-blue-light{
+    background-color: var(--theme-blue-light) !important;
+}
+.bg-blue-dark{
+    background-color: var(--theme-blue-dark) !important;
+}
+/********* General Section **********/
+
+
+/********* Bootstrap Overwrite **********/
+.btn-primary{
+    background-color: var(--theme-blue-semi-dark);
+    border-radius: 40px;
+    font-weight: 500;
+    padding: 0.9rem 2.4rem;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active{
+    background-color: var(--white);
+    border-color: var(--theme-blue-semi-dark);
+    color: var(--theme-blue-semi-dark);
+    border-radius: 40px;
+    font-weight: 500;
+}
+.btn-outline-primary {
+    color: var(--theme-blue-dark);
+    border: 2px solid var(--theme-blue-dark);
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 40px;
+    padding: 0.9rem 2.4rem;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: var(--white);
+    border: 2px solid var(--theme-blue-dark);
+    background-color: var(--theme-blue-dark);
+}
+.language-btn:hover,
+.language-btn:focus,
+.language-btn:active{
+    border-color: transparent;
+}
+/********* Bootstrap Overwrite **********/
+
+
+/********* Header Section **********/
+.header-section {
+    z-index: 10;
+    background-color: var(--white);
+    position: fixed;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 100%;
+}
+
+.header-section.scroll {
+    border-bottom: 2px solid var(--theme-blue-semi-light);
+    box-shadow: #85d5f740 0px 6px 8px 0px;
+}
+
+.header-section .main-logo {
+    width: 110px;
+    transition: width 0.4s ease-in-out;
+}
+
+.header-section.scroll .main-logo {
+    width: 80px;
+    transition: 0.4s;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--theme-blue-dark);
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    height: 4px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: 0;
+    background-color: var(--theme-blue-dark);
+}
+
+/********* Header Section **********/
+
+
+/********* Hero Section **********/
+.hero-section {
+    position: relative;
+}
+
+.hero-section .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hero-section .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, .3);
+}
+
+.hero-section .content h2 {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.hero-section .content span {
+    font-size: 56px;
+    font-weight: 700;
+}
+.hero-section .content p{
+    font-size: 1.3rem;
+}
+
+/********* Hero Section **********/
+
+/********* About Us Section **********/
+.about-us-section .left-section {
+    position: relative;
+}
+
+.about-us-section .left-section .icons .left-icon,
+.about-us-section .left-section .icons .right-icon {
+    height: 63px;
+    width: 63px;
+    position: absolute;
+    /* box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.4); */
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.4));
+}
+
+.about-us-section .left-section .icons .left-icon {
+    top: 30%;
+    left: -3%;
+}
+
+.about-us-section .left-section .icons .right-icon {
+    bottom: 15%;
+    right: 13.5%;
+}
+
+.about-us-section .left-section img {
+    border-radius: 12px;
+}
+
+.about-us-section .left-section img.img-bottom {
+    margin-top: 30px;
+}
+
+.about-us-section .right-section h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--theme-blue-semi-dark);
+}
+
+.about-us-section .right-section h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--theme-blue-dark);
+}
+
+.service-card-main-inside {
+    display: flex;
+}
+
+.service-card-main-outside {
+    display: none;
+}
+
+.about-us-section .service-card span {
+    font-weight: 700;
+    color: var(--theme-blue-semi-dark);
+}
+
+/********* About Us Section **********/
+
+
+/********* Explore Section **********/
+@media (max-width: 767px) {
+    .card-slider-section .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .card-slider-section .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.card-slider-section .carousel-inner .carousel-item.active,
+.card-slider-section .carousel-inner .carousel-item-next,
+.card-slider-section .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    .card-slider-section .carousel-inner .carousel-item-end.active,
+    .card-slider-section .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .card-slider-section .carousel-inner .carousel-item-start.active, 
+    .card-slider-section .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+    .card-slider-section .carousel-inner .carousel-item-end,
+    .card-slider-section .carousel-inner .carousel-item-start { 
+      transform: translateX(0);
+    }
+}
+
+.card-slider-section .carousel-image {
+    padding: 0rem 1rem;
+}
+.card-slider-section .carousel-image img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
+.explore-section {
+    background-color: #F0FAFE;
+}
+.explore-section .top-section{
+    position: relative;
+}
+.explore-section .top-section h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--theme-blue-dark);
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--theme-blue-semi-dark) !important;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: 1;
+    transition: opacity .15s ease;
+    border-radius: 50%;
+}
+.carousel-control-prev {
+    right: 96px;
+    left: auto;
+}
+.carousel-control-next {
+    right: 16px;
+    left: auto;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+.card-slider-section .carousel-item .carousel-image{
+    position: relative;
+    cursor: pointer;
+}
+.card-slider-section .carousel-item .location-info {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--theme-blue-dark);
+}
+.card-slider-section .carousel-item .explore-card-btn{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+    right: 30px;
+    left: 30px;
+    border-radius: 12px;
+    transition: 0.4s;
+    transform: translateY(170px);
+}
+.card-slider-section .carousel-item .carousel-image:hover .explore-card-btn{
+    display: flex;
+    transform: translateY(0px);
+}
+/********* Explore Section **********/
+
+/********* Contact Form Section **********/
+.contact-section .contact-card{
+    border-radius: 12px;
+    background-color: #D6F4FD;
+    display: flex;
+    height: 130px;
+    /* width: 470px; */
+    margin-bottom: 29px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+.contact-section .contact-card span{
+    font-weight: 700;
+    color: var(--theme-blue-dark);
+}
+.contact-section .contact-card a,
+.contact-section .contact-card p{
+    font-weight: 500;
+    color: var(--theme-blue-semi-dark);
+}
+.contact-section .top-section h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--theme-blue-dark);
+}
+.contact-section .contact-form .form-control{
+    border: 1px solid var(--theme-blue-semi-light);
+    color: var(--theme-blue-semi-light);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+}
+.contact-section .contact-form textarea.form-control{
+    border-radius: 20px;
+}
+.contact-section .contact-form .form-control:focus,
+.contact-section .contact-form .form-control:hover,
+.contact-section .contact-form .form-control:active{
+    box-shadow: none;
+}
+.contact-section .contact-form  ::placeholder{
+    color: var(--theme-blue-semi-light);
+}
+/********* Contact Form Section **********/
+
+
+/********* Whatsapp Btn Section **********/
+.whatsapp-btn > * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    box-sizing: border-box !important;
+    bottom: 50px; 
+    right: 50px; 
+    opacity: 1; 
+    transition: opacity 0.5s ease 0s; 
+    box-sizing: border-box; 
+    direction: ltr; 
+    text-align: right; 
+    position: fixed !important; 
+    z-index: 16000160 !important;
+}
+.whatsapp-btn .inner-div {
+    display: flex;
+    margin: 7px;
+    position: relative;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    max-height: 58px;
+}
+.whatsapp-btn .whatsapp {
+    order: 2;
+    position: relative;
+}
+.whatsapp-btn .whatsapp a {
+    flex-shrink: 0;
+    opacity: 1;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: block;
+    order: 2;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.06) 2px 2px 2.4px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    z-index: 200;
+    border: 2.61px solid rgb(255, 255, 255);
+    animation: 2s ease 1s infinite normal none running hJgPhc;
+    text-decoration: none !important;
+    background-color: rgb(77, 194, 71) !important;
+}
+.whatsapp-btn  svg:not(:root) {
+    overflow: hidden;
+}
+/********* Whatsapp Btn Section **********/
+
+
+/********* Card Modal Section **********/
+.modal .card-modal .left-section {
+    position: sticky;
+    top: 40px;
+}
+.modal .card-modal .close-ico{
+    position: fixed;
+    right: 2%;
+    z-index: 1;
+}
+/********* Card Modal Section **********/
